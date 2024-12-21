@@ -7,63 +7,27 @@ document.querySelector("#hamburger-menu").onclick = (e) => {
   e.preventDefault();
 };
 
-// toggle class active untuk search form
-const searchForm = document.querySelector(".search-form");
-const searchBox = document.querySelector("#search-box");
-
-document.querySelector("#search-button").onclick = (e) => {
-  searchForm.classList.toggle("active");
-  searchBox.focus();
-  e.preventDefault();
-};
-
-// toogle class active untuk shopping cart
-// const shoppingCart = document.querySelector(".shopping-cart");
-// document.querySelector("#shopping-cart-button").onclick = (e) => {
-//   shoppingCart.classList.toggle("active");
-//   e.preventDefault();
-// };
-
 // klik diluar elemen
 const hm = document.querySelector("#hamburger-menu");
-const sb = document.querySelector("#search-button");
-
 document.addEventListener("click", function (e) {
   if (!hm.contains(e.target) && !navbarNav.contains(e.target)) {
     navbarNav.classList.remove("active");
   }
-
-  if (!sb.contains(e.target) && !searchForm.contains(e.target)) {
-    searchForm.classList.remove("active");
-  }
-
 });
 
-// modal box
-const itemDetailModal = document.querySelector("#item-detail-modal");
-const itemDetailbuttons = document.querySelectorAll(".item-detail-button");
+  function sendEmail(event) {
+    event.preventDefault(); // Mencegah pengiriman formulir default
 
-itemDetailbuttons.forEach((btn) =>{
-  btn.onclick=(e)=>{
-    itemDetailModal.style.display='flex';
-    e.preventDefault();
-  }
-});
+    // Mengambil nilai dari input
+    const message = document.getElementById('message').value;
 
-itemDetailbuttons.onclick = (e) => {
-  itemDetailModal.style.display = "flex";
-  e.preventDefault();
-};
+    // Membangun URL untuk Gmail dengan alamat email yang ditentukan
+    const mailtoLink = `https://mail.google.com/mail/?view=cm&fs=1&to=akmalbayan03@mhs.unsiq.ac.id&su=Message%20from%20&body=${encodeURIComponent(message)}`;
 
-// klik tomol close
-document.querySelector(".modal .close-icon").onclick = (e) => {
-  itemDetailModal.style.display = "none";
-  e.preventDefault();
-};
+    // Membuka Gmail dengan URL yang dibangun
+    window.open(mailtoLink, '_blank');
+  
+      // Kosongkan form setelah pengiriman
+      document.getElementById('contact-form').reset();
+    }
 
-// klik diluar modal
-window.onclick = (e) => {
-  if (e.target === itemDetailModal) {
-    itemDetailModal.style.display = "none";
-  }
-};

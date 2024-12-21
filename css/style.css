@@ -85,91 +85,6 @@
     display: none;
   }
   
-  /* navbar search form */
-  .navbar .search-form {
-    position: absolute;
-    top: 100%;
-    right: 7%;
-    background-color: #fff;
-    width: 50rem;
-    height: 5rem;
-    display: flex;
-    align-items: center;
-    transform: scaleY(0);
-    transform-origin: top;
-    transition: 0.3s;
-  }
-  
-  .navbar .search-form.active {
-    transform: scaleY(1);
-  }
-  
-  .navbar .search-form input {
-    height: 100%;
-    width: 100%;
-    font-size: 1.6rem;
-    color: var(--bg);
-    padding: 1rem;
-  }
-  
-  .navbar .search-form label {
-    cursor: pointer;
-    font-size: 2rem;
-    margin-right: 1.5rem;
-    color: var(--bg);
-  }
-  
-  /* shopping cart */
-  .shopping-cart {
-    position: absolute;
-    top: 100%;
-    right: -100%;
-    height: 100vh;
-    width: 35rem;
-    padding: 0 1.5rem;
-    background-color: #fff;
-    color: var(--bg);
-    transition: 0.3s;
-  }
-  
-  .shopping-cart.active {
-    right: 0;
-  }
-  
-  .shopping-cart .cart-item {
-    margin: 2rem 0;
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px dashed #666;
-    position: relative;
-  }
-  
-  .shopping-cart img {
-    height: 6rem;
-    border-radius: 50%;
-  }
-  
-  .shopping-cart h3 {
-    font-size: 1.6rem;
-    padding-bottom: 0.5rem;
-  }
-  
-  .shopping-cart .item-price {
-    font-size: 1.2rem;
-  }
-  
-  .shopping-cart .remove-item {
-    position: absolute;
-    right: 1rem;
-    cursor: pointer;
-  }
-  
-  .shopping-cart .remove-item:hover {
-    color: var(--primary);
-  }
-  
   /* hero Sections */
   .hero {
     min-height: 95vh;
@@ -248,7 +163,7 @@
     font-size: 1rem;
     margin-top: 1rem;
     line-height: 1.4;
-    font-weight: 100;
+    font-weight: 300;
     text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
     mix-blend-mode: difference;
 }
@@ -311,8 +226,6 @@
     margin: 0 1rem; /* Jarak horizontal antara gambar */
 }
 
-  
-  
   /* about sections */
   .about,
   .menu,
@@ -389,31 +302,85 @@
     text-align: center;
     max-width: 30rem;
     margin: auto;
-    font-weight: 100;
+    font-weight: 300;
     line-height: 1.6;
   }
   
-  .menu .row {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 5rem;
-    justify-content: center;
-  }
-  
-  .menu .row .menu-card {
-    text-align: center;
-    padding-bottom: 4rem;
-  }
-  
-  .menu .row .menu-card img {
-    border-radius: 50%;
-    width: 80%;
-  }
-  
-  .menu .row .menu-card .menu-card-tittle {
-    margin: 1rem auto 0.5rem;
-  }
-  
+  /* Container for Certificates */
+.menu .certificate-container {
+  display: flex;
+  justify-content: center; /* Pusatkan elemen secara horizontal */
+  flex-wrap: wrap; /* Bungkus jika elemen terlalu banyak */
+  gap: 20px; /* Jarak antar-elemen */
+  margin-top: 20px; /* Berikan jarak di atas kontainer sertifikat */
+}
+
+/* Certificate Card Styling */
+.certificate-card {
+  position: relative; /* Untuk memungkinkan posisi absolut anak elemen */
+  max-width: 300px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  text-align: left;
+  margin-right: 20px; /* Jarak antar kartu */
+}
+
+.certificate-card p {
+  margin-bottom: 30px; /* Jarak antar paragraf dalam kartu */
+}
+
+.certificate-card-img {
+  width: 100%; /* Sesuaikan lebar gambar dengan kontainer */
+  max-width: 250px; /* Batas lebar maksimum gambar */
+  height: auto; /* Pertahankan rasio gambar */
+  border-radius: 10px; /* Sudut gambar melengkung */
+  margin: 0 auto 15px; /* Jarak bawah gambar */
+  display: block; /* Pusatkan gambar */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Efek bayangan pada gambar */
+}
+
+.certificate-card-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.certificate-card-description {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.certificate-card-date {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 15px;
+}
+
+/* Link Styling */
+.certificate-link {
+  position: absolute; /* Buat posisi absolut */
+  bottom: 10px; /* Posisikan 10px dari bawah */
+  left: 10px; /* Posisikan 10px dari kiri */
+  font-size: 14px;
+  color: #007bff;
+  text-decoration: none;
+  border: 1px solid #007bff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.certificate-link:hover {
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+}
+
   /* product section */
   .products .row {
     display: grid;
@@ -567,7 +534,7 @@
   }
   
   footer .credit a {
-    color: var(--bg);
+    color: var(--primary);
     font-weight: 700;
   }
   
