@@ -1,3 +1,5 @@
+@import "animate.css/animate.min.css";
+
 :root {
     --primary: #f80000;
     --bg: #010101;
@@ -27,7 +29,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.4rem 7%;
+    padding: 0.8rem 5%; /* Mengurangi padding agar navbar tidak terlalu besar */
     background-color: rgba(1, 1, 1, 0.8);
     border-bottom: 1px solid #ffffff;
     position: fixed;
@@ -35,14 +37,30 @@
     left: 0;
     right: 0;
     z-index: 9999;
+    transition: all 1s ease; /* Transisi halus untuk efek animasi */
   }
   
   .navbar .navbar-logo {
-    font-size: 2rem;
+    font-size: 2rem; /* Mengurangi ukuran font logo navbar */
     font-weight: 700;
     color: #fff;
     font-style: italic;
   }
+
+  /* Efek saat kursor diarahkan */
+.navbar-logo:hover {
+  color: #f40000; /* Ubah warna teks saat hover (misalnya biru terang) */
+  text-shadow: 
+    0 0 5px #000000, /* Efek cahaya luar */
+    0 0 10px #000000, 
+    0 0 15px #000000,
+    0 0 20px #000000,
+    0 0 30px #ffffff,
+    0 0 40px #ffffff,
+    0 0 50px #ffffff;
+  transform: scale(1.1); /* Memberikan efek zoom sedikit */
+  transition: all 0.3s ease;
+}
   
   .navbar .navbar-logo span {
     color: var(--primary);
@@ -51,7 +69,7 @@
   .navbar .navbar-nav a {
     color: #fff;
     display: inline-block;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     margin: 0 1rem;
   }
   
@@ -98,7 +116,6 @@
     background-size: cover;
     background-position: center;
     padding-top: 60px; /* Tambahkan padding atas untuk menghindari navbar */
-
 }
 
 .hero::after {
@@ -122,9 +139,23 @@
     height: 160px;
     border-radius: 50%;
     margin-bottom: 1rem;
-    /* background-color: #fff; */
     position: relative; /* Posisi relatif agar pseudo-elemen dapat diposisikan dengan benar */
     overflow: hidden; /* Memastikan efek tidak keluar dari gambar */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Menambahkan transisi pada transform dan box-shadow */
+    animation-duration: 1s;
+    animation-delay: 0.3s; /* Menambahkan delay untuk gambar */
+    animation-fill-mode: both; /* Menjaga elemen tetap pada posisi akhir animasi */
+}
+
+/* Efek saat kursor diarahkan ke gambar */
+.hero img:hover {
+  box-shadow: 
+    0 0 5px #f80000, /* Cahaya di sekitar gambar */
+    0 0 10px #f80000,
+    0 0 20px #f80000,
+    0 0 30px #f80000, 
+    0 0 40px #f80000; 
+  transform: scale(1.1); /* Efek zoom sedikit saat hover */
 }
 
 .hero .content img:hover::after {
@@ -148,15 +179,28 @@
     }
 }
 
+/* Heading 2 (Hello World) */
+.hero .content h2 {
+  animation-duration: 1s;
+  animation-delay: 0.5s; /* Menambahkan delay untuk heading 2 */
+  animation-fill-mode: both;
+}
+
 .hero .content h1 {
     font-size: 3em;
     color: #fff;
     text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
     line-height: 1.2;
+    animation-duration: 1s;
+    animation-delay: 0.7s; /* Menambahkan delay untuk heading 1 */
+    animation-fill-mode: both;
 }
 
 .hero .content h1 span {
     color: var(--primary);
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: both;
 }
 
 .hero .content p {
@@ -166,12 +210,30 @@
     font-weight: 300;
     text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
     mix-blend-mode: difference;
+    animation-duration: 1s;
+    animation-delay: 0.9s; /* Menambahkan delay untuk paragraf */
+    animation-fill-mode: both;
 }
+
 .button-container {
     display: flex;
     gap: 2rem; /* Add space between buttons */
     justify-content: center;
     margin-top: 1rem;
+}
+
+/* Untuk tombol utama (Get In Touch) yang muncul dari kiri */
+.cta.animate__fadeInLeft {
+  animation-duration: 2s;
+  animation-delay: 0.3s;
+  animation-fill-mode: both;
+}
+
+/* Untuk tombol sekunder (Download CV) yang muncul dari kanan */
+.cta.secondary.animate__fadeInRight {
+  animation-duration: 2s;
+  animation-delay: 0.3s;
+  animation-fill-mode: both;
 }
 
 .cta {
@@ -223,8 +285,39 @@
     max-width: 80px; /* Batas maksimum untuk ukuran gambar */
     border-radius: 8px; /* Rounded corners */
     object-fit: contain; /* Memastikan gambar terlihat sepenuhnya */
-    margin: 0 1rem; /* Jarak horizontal antara gambar */
+    margin: 10px;
+    opacity: 0;
+    animation-duration: 2s;
+    animation-delay: 0.3s;
+    animation-fill-mode: both;
 }
+
+h2.animate__fadeInUp {
+  animation-duration: 2s;
+  animation-delay: 0.3s; /* Menambahkan sedikit delay */
+  animation-fill-mode: both;
+}
+
+.experience-icons img:nth-child(1) {
+  animation-delay: 0.5s;
+}
+
+.experience-icons img:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.experience-icons img:nth-child(3) {
+  animation-delay: 0.1s;
+}
+
+.experience-icons img:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+.experience-icons img:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
 
   /* about sections */
   .about,
@@ -248,6 +341,72 @@
   .contact h2 span {
     color: var(--primary);
   }
+
+  /* Menyembunyikan section "about" dan isinya */
+#about {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease-out, visibility 0s linear 1s;
+}
+
+#about.visible {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1s ease-in;
+}
+
+/* Efek FadeInLeft untuk gambar pertama */
+.about-img:nth-child(1) {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+/* Efek FadeInRight untuk gambar kedua */
+.about-img:nth-child(2) {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+/* Menambahkan animasi FadeInLeft untuk gambar ketiga */
+.about-img:nth-child(3) {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+/* Menambahkan animasi FadeInRight untuk gambar keempat */
+.about-img:nth-child(4) {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+/* Menambahkan animasi FadeInDown untuk tulisan di section about */
+#about h2 {
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+/* Kelas "visible" akan memicu animasi */
+#about.visible h2 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Menambahkan efek FadeInDown untuk gambar ketiga dan keempat */
+#about.visible .about-img:nth-child(3) {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+#about.visible .about-img:nth-child(4) {
+  opacity: 1;
+  transform: translateX(0);
+}
+
   
   .about .row {
     display: flex;
@@ -288,7 +447,6 @@
     color: #000; /* Change text color to black on hover */
 }
 
-  
   /* menu section */
   .menu h2,
   .products h2,

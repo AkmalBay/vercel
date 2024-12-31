@@ -45,6 +45,11 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
   </head>
 
   <body>
@@ -54,8 +59,8 @@
 
       <div class="navbar-nav">
         <a href="#home">HOME</a>
-        <a href="#about">PROJECTS</a>
-        <a href="#menu">EXPERIENCE</a>
+        <a href="#about" id="projectsNav">PROJECTS</a>
+        <a href="#menu">ACHIEVEMENTS</a>
         <a href="#contact">CONTACT</a>
       </div>
 
@@ -68,10 +73,14 @@
     <!-- hero Sections start  -->
     <section class="hero" id="home">
       <main class="content">
-        <img src="img/avatar2.png" alt="Profile Picture" />
-        <h2>Hello World</h2>
-        <h1>Penetration <span>Testing</span></h1>
-        <p>
+        <img
+          src="img/avatar2.png"
+          alt="Profile Picture"
+          class="animate__animated animate__fadeInDown"
+        />
+        <h2 class="animate__animated animate__fadeInDown">Hello World</h2>
+        <h1 class="animate__animated animate__fadeInDown">Penetration <span>Testing</span></h1>
+        <p class="animate__animated animate__fadeInDown">
           I am an experienced bug hunter with over 2+ years of expertise in
           identifying and reporting vulnerabilities on websites. My focus is on
           application and infrastructure security testing, ensuring systems are
@@ -80,87 +89,181 @@
           mitigate risks effectively.
         </p>
         <div class="button-container">
-          <a href="#" class="cta">Get In Touch</a>
-          <a href="#" class="cta secondary">Download CV</a>
+          <a href="https://github.com/AkmalBay" class="cta animate__animated animate__fadeInLeft">Get In Touch</a>
+          <a href="#" class="cta secondary animate__animated animate__fadeInRight">Download CV</a>
         </div>
       </main>
-      <h2>EXPERIENCE WITH</h2>
+      <h2 class="animate__animated animate__fadeInUp">EXPERIENCE WITH</h2>
       <div class="experience-icons">
-        <img src="img/kali-burpsuite.png" alt="burpsuite Experience" />
-        <img src="img/kali-hydra.png" alt="hydra Experience" />
-        <img
-          src="img/kali-metasploit-framework.png"
-          alt="metasploit Experience"
-        />
-        <img src="img/kali-nmap.png" alt="nmap Experience" />
-        <img src="img/kali-sqlmap.png" alt="sqlmap Experience" />
+        <img src="img/kali-burpsuite.png" alt="burpsuite Experience" class="animate__animated animate__fadeInUp" />
+        <img src="img/kali-hydra.png" alt="hydra Experience" class="animate__animated animate__fadeInUp" />
+        <img src="img/kali-metasploit-framework.png" alt="metasploit Experience" class="animate__animated animate__fadeInUp" />
+        <img src="img/kali-nmap.png" alt="nmap Experience" class="animate__animated animate__fadeInUp" />
+        <img src="img/kali-sqlmap.png" alt="sqlmap Experience" class="animate__animated animate__fadeInUp" />
       </div>
     </section>
     <!-- Hero Sections end  -->
 
     <!-- about sections start-->
     <section id="about" class="about">
-      <h2>PROJECTS</h2>
+      <h2 class="animate__animated animate__fadeInDown">PROJECTS</h2>
       <div class="row">
-        <div class="about-img">
+        <div class="about-img animate__animated animate__fadeInLeft">
           <img src="img/project-thumbnail-1.png" alt="html" />
-          <a href="https://akmalbay.github.io/" class="visit-text"
-            >CLICK HERE TO VISIT</a
-          >
+          <a href="https://akmalbay.github.io/" class="visit-text">CLICK HERE TO VISIT</a>
         </div>
-        <div class="about-img">
+        <div class="about-img animate__animated animate__fadeInRight">
           <img src="img/project-thumbnail-2.png" alt="css" />
-          <a href="https://invitation-mauve.vercel.app/welcome/muhammad-akmalul-bayan-lutfhi-fdf9" class="visit-text"
-            >CLICK HERE TO VISIT</a
-          >
+          <a href="https://invitation-mauve.vercel.app/welcome/muhammad-akmalul-bayan-lutfhi-fdf9" class="visit-text">CLICK HERE TO VISIT</a>
         </div>
       </div>
     </section>
     <!-- about sections end-->
 
-   <!-- Menu Section Start -->
-<section id="menu" class="menu">
-  <h2>EXPERIENCE</h2>
-  <p>
-    Experienced bug hunter with 2+ years of expertise in identifying and
-    reporting web vulnerabilities, specializing in application and
-    infrastructure security.
-  </p>
-
-  <div class="certificate-container">
-    <div class="certificate-card">
-      <img src="img/sertifikat/Certificate-of-Completion-Introduction-to-Information-Security_page-0001.jpg" alt="Certificate 1" class="certificate-card-img" />
-      <h3 class="certificate-card-title">- Offensive Security Certified Professional (OSCP)</h3>
-      <p class="certificate-card-description">
-        Completed the OSCP certification, proving my ability to perform penetration testing in real-world environments.
+    <!-- Menu Section Start -->
+    <section id="menu" class="menu">
+      <h2>ACHIEVEMENTS</h2>
+      <p>
+        "A collection of certifications that showcase my expertise and
+        continuous learning in cybersecurity, ethical hacking, and information
+        security domains."
       </p>
-      <p class="certificate-card-date">Issued: June 2023</p>
-      <a href="https://www.offensive-security.com" class="certificate-link" target="_blank">View Certificate</a>
-    </div>
 
-    <div class="certificate-card">
-      <img src="img/sertifikat/Ethical_Hacker_Badge20240827-7-p0zle7_page-0001.jpg" alt="Certificate 2" class="certificate-card-img" />
-      <h3 class="certificate-card-title">- Certified Ethical Hacker (CEH)</h3>
-      <p class="certificate-card-description">
-        Achieved the CEH certification to demonstrate my knowledge and skills in ethical hacking and security testing.
-      </p>
-      <p class="certificate-card-date">Issued: March 2022</p>
-      <a href="https://www.eccouncil.org" class="certificate-link" target="_blank">View Certificate</a>
-    </div>
+      <div class="certificate-container">
+        <div class="certificate-card">
+          <img
+            src="img/sertifikat/Certificate-of-Completion-Introduction-to-Information-Security_page-0001.jpg"
+            alt="Certificate 1"
+            class="certificate-card-img"
+          />
+          <h3 class="certificate-card-title">
+            Introduction To Information Security Course
+          </h3>
+          <p class="certificate-card-description">
+            Successfully completed the Introduction to Information Security
+            course, demonstrating a strong foundation in protecting systems,
+            networks, and data from potential threats and vulnerabilities.
+          </p>
+          <p class="certificate-card-date">Issued: January 2024</p>
+          <a
+            href="https://www.offensive-security.com"
+            class="certificate-link"
+            target="_blank"
+            >View Certificate</a
+          >
+        </div>
 
-    <div class="certificate-card">
-      <img src="img/sertifikat/sertifikat_course_382_2780155_131023104413_page-0001.jpg" alt="Certificate 3" class="certificate-card-img" />
-      <h3 class="certificate-card-title">- Web Application Security Expert</h3>
-      <p class="certificate-card-description">
-        This certification demonstrates advanced skills in securing web applications against common vulnerabilities.
-      </p>
-      <p class="certificate-card-date">Issued: December 2021</p>
-      <a href="https://www.security-certifications.org" class="certificate-link" target="_blank">View Certificate</a>
-    </div>
-  </div>
-</section>
-<!-- Menu Section End -->
+        <div class="certificate-card">
+          <img
+            src="img/sertifikat/Ethical_Hacker_Badge20240827-7-p0zle7_page-0001.jpg"
+            alt="Certificate 2"
+            class="certificate-card-img"
+          />
+          <h3 class="certificate-card-title">Ethical Hacker</h3>
+          <p class="certificate-card-description">
+            Completed the Cisco Ethical Hacking course, showcasing expertise in
+            identifying vulnerabilities and securing systems through ethical
+            hacking methodologies.
+          </p>
+          <p class="certificate-card-date">Issued: August 2024</p>
+          <a
+            href="https://www.eccouncil.org"
+            class="certificate-link"
+            target="_blank"
+            >View Certificate</a
+          >
+        </div>
 
+        <div class="certificate-card">
+          <img
+            src="img/sertifikat/sertifikat_course_382_2780155_131023104413_page-0001.jpg"
+            alt="Certificate 3"
+            class="certificate-card-img"
+          />
+          <h3 class="certificate-card-title">Learning Basics DevOps</h3>
+          <p class="certificate-card-description">
+            Successfully completed the Belajar Dasar-Dasar DevOps course from
+            Dicoding, gaining foundational knowledge in automating workflows,
+            managing infrastructure, and enhancing collaboration in software
+            development.
+          </p>
+          <p class="certificate-card-date">Issued: October 2023</p>
+          <a
+            href="https://www.security-certifications.org"
+            class="certificate-link"
+            target="_blank"
+            >View Certificate</a
+          >
+        </div>
+
+        <div class="certificate-card">
+          <img
+            src="img/sertifikat/Introduction_to_Cybersecurity_Badge20240827-7-b5v7i2_page-0001.jpg"
+            alt="Certificate 2"
+            class="certificate-card-img"
+          />
+          <h3 class="certificate-card-title">
+            Introductions To Cyber Security
+          </h3>
+          <p class="certificate-card-description">
+            Successfully completed the Cisco Introduction to Cyber Security
+            course, acquiring foundational knowledge in identifying
+            vulnerabilities and implementing effective security measures to
+            safeguard systems and networks.
+          </p>
+          <p class="certificate-card-date">Issued: August 2024</p>
+          <a
+            href="https://www.eccouncil.org"
+            class="certificate-link"
+            target="_blank"
+            >View Certificate</a
+          >
+        </div>
+
+        <div class="certificate-card">
+          <img
+            src="img/sertifikat/Sertifikat Kuliah Pakar - Muhammad Akmalul Bayan Lutfhi_page-0001.jpg"
+            alt="Certificate 2"
+            class="certificate-card-img"
+          />
+          <h3 class="certificate-card-title">Expert Lecture</h3>
+          <p class="certificate-card-description">
+            Participated in an expert lecture organized by the Faculty of
+            Engineering and Computer Science, gaining valuable insights into
+            advanced topics in technology and cybersecurity.
+          </p>
+          <p class="certificate-card-date">Issued: August 2024</p>
+          <a
+            href="https://www.eccouncil.org"
+            class="certificate-link"
+            target="_blank"
+            >View Certificate</a
+          >
+        </div>
+
+        <div class="certificate-card">
+          <img
+            src="img/sertifikat/Certificate_cybersec_microsoft_ai_page-0001.jpg"
+            alt="Certificate 2"
+            class="certificate-card-img"
+          />
+          <h3 class="certificate-card-title">Microsoft Security</h3>
+          <p class="certificate-card-description">
+            Successfully completed a Microsoft Security course, demonstrating
+            proficiency in implementing and managing robust security measures to
+            protect systems and data in Microsoft environments
+          </p>
+          <p class="certificate-card-date">Issued: January 2024</p>
+          <a
+            href="https://www.eccouncil.org"
+            class="certificate-link"
+            target="_blank"
+            >View Certificate</a
+          >
+        </div>
+      </div>
+    </section>
+    <!-- Menu Section End -->
 
     <!-- contact section star -->
     <section id="contact" class="contact">
@@ -221,8 +324,7 @@
       <div class="links">
         <a href="#home">Home</a>
         <a href="#about">Projects</a>
-        <a href="#menu">Experience</a>
-        <!-- <a href="#products">produk</a> -->
+        <a href="#menu">Achievements</a>
         <a href="#contact">Contact</a>
       </div>
       <div class="credit">
@@ -233,13 +335,13 @@
       </div>
     </footer>
     <!-- footer end -->
-     
+
     <!--feather icons-->
     <script>
       feather.replace();
     </script>
 
-       <!-- My Javascript -->
-       <script src="js/script.js"></script>
+    <!-- My Javascript -->
+    <script src="js/script.js"></script>
   </body>
 </html>
