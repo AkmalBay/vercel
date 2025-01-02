@@ -326,7 +326,7 @@ h2.animate__fadeInUp {
   .contact {
     padding: 8rem 7% 1.4rem;
   }
-  
+
   .about h2,
   .menu h2,
   .products h2,
@@ -335,79 +335,7 @@ h2.animate__fadeInUp {
     font-size: 2.6rem;
     margin-bottom: 3rem;
   }
-  
-  .menu h2 span,
-  .products h2 span,
-  .contact h2 span {
-    color: var(--primary);
-  }
 
-  /* Menyembunyikan section "about" dan isinya */
-#about {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 1s ease-out, visibility 0s linear 1s;
-}
-
-#about.visible {
-  opacity: 1;
-  visibility: visible;
-  transition: opacity 1s ease-in;
-}
-
-/* Efek FadeInLeft untuk gambar pertama */
-.about-img:nth-child(1) {
-  opacity: 0;
-  transform: translateX(-100%);
-  transition: transform 1s ease, opacity 1s ease;
-}
-
-/* Efek FadeInRight untuk gambar kedua */
-.about-img:nth-child(2) {
-  opacity: 0;
-  transform: translateX(100%);
-  transition: transform 1s ease, opacity 1s ease;
-}
-
-/* Menambahkan animasi FadeInLeft untuk gambar ketiga */
-.about-img:nth-child(3) {
-  opacity: 0;
-  transform: translateX(-100%);
-  transition: transform 1s ease, opacity 1s ease;
-}
-
-/* Menambahkan animasi FadeInRight untuk gambar keempat */
-.about-img:nth-child(4) {
-  opacity: 0;
-  transform: translateX(100%);
-  transition: transform 1s ease, opacity 1s ease;
-}
-
-/* Menambahkan animasi FadeInDown untuk tulisan di section about */
-#about h2 {
-  opacity: 0;
-  transform: translateY(-100%);
-  transition: transform 1s ease, opacity 1s ease;
-}
-
-/* Kelas "visible" akan memicu animasi */
-#about.visible h2 {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Menambahkan efek FadeInDown untuk gambar ketiga dan keempat */
-#about.visible .about-img:nth-child(3) {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-#about.visible .about-img:nth-child(4) {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-  
   .about .row {
     display: flex;
     justify-content: center; /* Memusatkan kolom di dalam baris */
@@ -606,6 +534,10 @@ h2.animate__fadeInUp {
   }
   
   /* contact section */
+  .contact h2 span {
+    color: var(--primary);
+  }
+
   .contact .row {
     display: flex;
     margin-top: 2rem;

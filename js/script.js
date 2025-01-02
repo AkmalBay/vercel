@@ -15,16 +15,6 @@ document.addEventListener("click", function (e) {
   }
 });
 
-// Ambil elemen navbar dan section about
-const projectsNav = document.getElementById("projectsNav");
-const aboutSection = document.getElementById("about");
-
-// Ketika navbar "Projects" diklik
-projectsNav.addEventListener("click", function() {
-  // Tambahkan kelas "visible" ke section "about" untuk memunculkan projek dengan animasi
-  aboutSection.classList.add("visible");
-});
-
   function sendEmail(event) {
     event.preventDefault(); // Mencegah pengiriman formulir default
 
