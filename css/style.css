@@ -325,6 +325,10 @@ h2.animate__fadeInUp {
   .products,
   .contact {
     padding: 8rem 7% 1.4rem;
+    position: relative;
+    scroll-margin-top: 20px; 
+    margin-top: 100px;
+
   }
 
   .about h2,
@@ -334,6 +338,7 @@ h2.animate__fadeInUp {
     text-align: center;
     font-size: 2.6rem;
     margin-bottom: 3rem;
+    margin-top: -100px;
   }
 
   .about .row {

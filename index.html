@@ -305,19 +305,19 @@
 
     <!-- contact section star -->
     <section id="contact" class="contact">
-      <h2><span>CONTACT </span>ME</h2>
-      <p>Feel free to reach out for collaboration or inquiries</p>
+      <h2 data-aos="fade-down"><span>CONTACT </span>ME</h2>
+      <p data-aos="fade-down">Feel free to reach out for collaboration or inquiries</p>
 
       <div class="row">
-        <iframe
+        <iframe 
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3954.501205157614!2d109.24635070000004!3d-7.629121999999985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e65416d9931a213%3A0xe72cf30650d8f7db!2sBryan%20Gass!5e0!3m2!1sid!2sid!4v1692364498925!5m2!1sid!2sid"
           allowfullscreen=""
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
-          class="map"
+          class="map" data-aos="fade-right"
         ></iframe>
 
-        <form id="contact-form" class="form-group" onsubmit="sendEmail(event)">
+        <form id="contact-form" class="form-group" data-aos="fade-left" onsubmit="sendEmail(event)">
           <label for="nama" placeholder="nama"></label>
           <input
             placeholder="Name"
@@ -352,7 +352,7 @@
     <!-- contact section end -->
 
     <!-- footer start -->
-    <footer>
+    <footer data-aos="fade-up">
       <div class="socials">
         <a href="#"><i data-feather="instagram"></i></a>
         <a href="#"><i data-feather="twitter"></i></a>
@@ -386,5 +386,10 @@
     <script>
       AOS.init();
     </script>
+
+<div id="location-info">
+  Memuat lokasi Anda...
+</div>
+
   </body>
 </html>
